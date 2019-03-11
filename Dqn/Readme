@@ -35,3 +35,6 @@ Files in the project
 1. ipython notebook contains the functions to train the network
 2. Model.py contain the neural network used to predict the q value
 3. sumuk_ddqn_agent.py contain the agent class and replay buffer class 
+
+Youtube Link of the agent collecting the Yellow banana
+https://www.youtube.com/watch?v=jQbDXhDeXXg 
