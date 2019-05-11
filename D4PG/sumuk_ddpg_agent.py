@@ -121,7 +121,7 @@ class DDPGAgent():
         self.optim_critic.step()
         
         caction = self.actor_local(state)
-        actor_loss = -(self.z_torch.view(1,-1) * self.critic_local(state,caction)).sum(-1).mean()
+        actor_loss = -(self.z_torch.view(1,-1) * F.softmax(self.critic_local(state,caction))).sum(-1).mean()
         self.optim_actor.zero_grad()
         actor_loss.backward()
         self.optim_actor.step()
