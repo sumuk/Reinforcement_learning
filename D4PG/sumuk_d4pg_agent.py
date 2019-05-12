@@ -48,7 +48,7 @@ class OUNoise:
         self.state = x + dx
         return self.state
 
-class DDPGAgent():
+class D4PGAgent():
     def __init__(self,batch_size,state_size,action_size,num_nodes,replaybuffer):
         self.num_nodes = num_nodes
         self.batch_size=batch_size
